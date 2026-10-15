@@ -1,0 +1,29 @@
+{
+  "scraped_at": "2026-10-15T07:37:33.976782+00:00",
+  "casinos": [
+    {
+      "casino": "WanejoBets",
+      "source_url": "https://www.casino.org/en-za/bonus/wanejobets/",
+      "welcome_bonus": null,
+      "wagering_multiplier": null,
+      "min_deposit": null,
+      "error": "Connection error."
+    },
+    {
+      "casino": "ReadySetBet",
+      "source_url": "https://www.casino.org/en-za/bonus/readysetbet/",
+      "welcome_bonus": null,
+      "wagering_multiplier": null,
+      "min_deposit": null,
+      "error": "Connection error."
+    },
+    {
+      "casino": "Mzansibet",
+      "source_url": "https://www.casino.org/en-za/bonus/mzansibet/",
+      "welcome_bonus": null,
+      "wagering_multiplier": null,
+      "min_deposit": null,
+      "error": "Connection error."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casino welcome bonuses</title>
+<style>
+ body{font-family:system-ui,sans-serif;margin:1rem;max-width:900px}
+ .wrap{overflow-x:auto}
+ table{border-collapse:collapse;width:100%}
+ th,td{padding:.6rem;border-bottom:1px solid #ccc;text-align:left;white-space:nowrap}
+ td:nth-child(2){white-space:normal}
+ small{color:#666}
+</style></head><body>
+<h1>Casino welcome bonuses</h1>
+<p><small id="ts"></small></p>
+<div class="wrap"><table>
+ <thead><tr><th>Casino</th><th>Welcome bonus</th><th>Wagering (x)</th><th>Min. deposit</th><th>Source</th></tr></thead>
+ <tbody id="rows"></tbody>
+</table></div>
+<script>
+const esc=s=>String(s??"n/a").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+fetch("bonuses.json").then(r=>r.json()).then(d=>{
+  document.getElementById("ts").textContent="Last scraped: "+new Date(d.scraped_at).toLocaleString();
+  document.getElementById("rows").innerHTML=d.casinos.map(c=>
+   `<tr><td>${esc(c.casino)}</td><td>${esc(c.welcome_bonus)}</td><td>${esc(c.wagering_multiplier)}</td>
+    <td>${esc(c.min_deposit)}</td><td><a href="${esc(c.source_url)}" rel="noopener">link</a></td></tr>`).join("");
+}).catch(()=>document.getElementById("rows").innerHTML="<tr><td colspan=5>Could not load bonuses.json</td></tr>");
+</script></body></html>
