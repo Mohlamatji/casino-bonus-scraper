@@ -19,6 +19,8 @@ logins/CAPTCHAs/blocks (a block is logged as a failure), and exits non-zero if a
 ## Deploy
 Push to GitHub, enable Pages (Settings > Pages > main branch / root).
 
+- The LLM extraction step could not be completed: the Anthropic API returned "credit balance too low" on my account, so bonuses.json contains no extracted values. The scraper, robots.txt check, web page and written part are complete.
+
 ## Known gaps
 - Only 3 casinos are scraped, all from one source (casino.org South Africa bonus pages).
 - Some pages list several offers or wagering figures (for example casino vs sports). The model picks one, so I checked each value in bonuses.json by hand against the page.
