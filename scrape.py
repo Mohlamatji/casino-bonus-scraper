@@ -10,11 +10,10 @@ USER_AGENT = "BonusScreeningBot/1.0 (+27629218083: padimahlatsi008@gmail.com)"
 MODEL = os.getenv("ANTHROPIC_MODEL", "claude-haiku-5-5")
 
 SOURCES = [
-    {"casino": "WanejoBets",   "url": "https://www.casino.org/en-za/bonus/wanejobets/"},
-    {"casino": "ReadySetBet",  "url": "https://www.casino.org/en-za/bonus/readysetbet/"},
-    {"casino": "Mzansibet",    "url": "https://www.casino.org/en-za/bonus/mzansibet/"},
+    {"casino": "Pistolo",   "url": "https://www.gambling.com/ie/online-casinos/reviews/pistolo"},
+    {"casino": "Malina",    "url": "https://www.gambling.com/ie/online-casinos/reviews/malina"},
+    {"casino": "GambleZen", "url": "https://www.gambling.com/ie/online-casinos/gamblezen"},
 ]
-
 PROMPT = """From the casino promotion text below, extract the WELCOME / first-deposit bonus.
 Return ONLY a JSON object with exactly these keys:
   "welcome_bonus": string, e.g. "100% up to 500 EUR" (null if not found),
